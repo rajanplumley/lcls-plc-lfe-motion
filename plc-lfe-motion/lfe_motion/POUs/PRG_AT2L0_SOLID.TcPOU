@@ -1,111 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
   <POU Name="PRG_AT2L0_SOLID" Id="{6180f524-6468-4c61-b137-11e8cfa13685}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_AT2L0_SOLID
 VAR
+	// Flip this bit to enter a "debug" mode that allows motion control via TwinCat
     bAT2L0_debug: BOOL := FALSE;
+	// Otherwise the motors are only enabled during commanded motion.
     nAT2L0_enableMode: ENUM_StageEnableMode := ENUM_StageEnableMode.DURING_MOTION;
-
     iIndex: INT;
     fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
     fbAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
-
-    // For plotting voltage/current during debugging
-    nM1CoilARaw AT %I*: UINT;
-    nM1CoilBRaw AT %I*: UINT; // ..CoilBRaw is currently linked to EL7041 'Coil Voltage A'
-    nM1CoilA: INT;
-    nM1CoilB: INT;
-    //nM1Current: INT;
-    nM2CoilARaw AT %I*: UINT;
-    nM2CoilBRaw AT %I*: UINT;
-    nM2CoilA: INT;
-    nM2CoilB: INT;
-    //nM2Current: INT;
-    nM3CoilARaw AT %I*: UINT;
-    nM3CoilBRaw AT %I*: UINT;
-    nM3CoilA: INT;
-    nM3CoilB: INT;
-    //nM3Current: INT;
-    nM4CoilARaw AT %I*: UINT;
-    nM4CoilBRaw AT %I*: UINT;
-    nM4CoilA: INT;
-    nM4CoilB: INT;
-    //nM4Current: INT;
-    nM5CoilARaw AT %I*: UINT;
-    nM5CoilBRaw AT %I*: UINT;
-    nM5CoilA: INT;
-    nM5CoilB: INT;
-    //nM5Current: INT;
-    nM6CoilARaw AT %I*: UINT;
-    nM6CoilBRaw AT %I*: UINT;
-    nM6CoilA: INT;
-    nM6CoilB: INT;
-    //nM6Current: INT;
-    nM7CoilARaw AT %I*: UINT;
-    nM7CoilBRaw AT %I*: UINT;
-    nM7CoilA: INT;
-    nM7CoilB: INT;
-    //nM7Current: INT;
-    nM8CoilARaw AT %I*: UINT;
-    nM8CoilBRaw AT %I*: UINT;
-    nM8CoilA: INT;
-    nM8CoilB: INT;
-    //nM8Current: INT;
-    nM9CoilARaw AT %I*: UINT;
-    nM9CoilBRaw AT %I*: UINT;
-    nM9CoilA: INT;
-    nM9CoilB: INT;
-    //nM9Current: INT;
-    nM10CoilARaw AT %I*: UINT;
-    nM10CoilBRaw AT %I*: UINT;
-    nM10CoilA: INT;
-    nM10CoilB: INT;
-    //nM10Current: INT;
-    nM11CoilARaw AT %I*: UINT;
-    nM11CoilBRaw AT %I*: UINT;
-    nM11CoilA: INT;
-    nM11CoilB: INT;
-    //nM11Current: INT;
-    nM12CoilARaw AT %I*: UINT;
-    nM12CoilBRaw AT %I*: UINT;
-    nM12CoilA: INT;
-    nM12CoilB: INT;
-    //nM12Current: INT;
-    nM13CoilARaw AT %I*: UINT;
-    nM13CoilBRaw AT %I*: UINT;
-    nM13CoilA: INT;
-    nM13CoilB: INT;
-    //nM13Current: INT;
-    nM14CoilARaw AT %I*: UINT;
-    nM14CoilBRaw AT %I*: UINT;
-    nM14CoilA: INT;
-    nM14CoilB: INT;
-    //nM14Current: INT;
-    nM15CoilARaw AT %I*: UINT;
-    nM15CoilBRaw AT %I*: UINT;
-    nM15CoilA: INT;
-    nM15CoilB: INT;
-    //nM15Current: INT;
-    nM16CoilARaw AT %I*: UINT;
-    nM16CoilBRaw AT %I*: UINT;
-    nM16CoilA: INT;
-    nM16CoilB: INT;
-    //nM16Current: INT;
-    nM17CoilARaw AT %I*: UINT;
-    nM17CoilBRaw AT %I*: UINT;
-    nM17CoilA: INT;
-    nM17CoilB: INT;
-    //nM17Current: INT;
-    nM18CoilARaw AT %I*: UINT;
-    nM18CoilBRaw AT %I*: UINT;
-    nM18CoilA: INT;
-    nM18CoilB: INT;
-    //nM18Current: INT;
-    nM19CoilARaw AT %I*: UINT;
-    nM19CoilBRaw AT %I*: UINT;
-    nM19CoilA: INT;
-    nM19CoilB: INT;
-    //nM19Current: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -141,68 +45,10 @@ FOR iIndex := 0 TO 18 BY 1 DO
     fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
     fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
 END_FOR
-iIndex := 0;
-
-nM1CoilA := UINT_TO_INT(nM1CoilARaw);
-nM1CoilB := UINT_TO_INT(nM1CoilBRaw);
-//nM1Current := ABS(nM1CoilA) + ABS(nM1CoilB);
-nM2CoilA := UINT_TO_INT(nM2CoilARaw);
-nM2CoilB := UINT_TO_INT(nM2CoilBRaw);
-//nM2Current := ABS(nM2CoilA) + ABS(nM2CoilB);
-nM3CoilA := UINT_TO_INT(nM3CoilARaw);
-nM3CoilB := UINT_TO_INT(nM3CoilBRaw);
-//nM3Current := ABS(nM3CoilA) + ABS(nM3CoilB);
-nM4CoilA := UINT_TO_INT(nM4CoilARaw);
-nM4CoilB := UINT_TO_INT(nM4CoilBRaw);
-//nM4Current := ABS(nM4CoilA) + ABS(nM4CoilB);
-nM5CoilA := UINT_TO_INT(nM5CoilARaw);
-nM5CoilB := UINT_TO_INT(nM5CoilBRaw);
-//nM5Current := ABS(nM5CoilA) + ABS(nM5CoilB);
-nM5CoilA := UINT_TO_INT(nM5CoilARaw);
-nM5CoilB := UINT_TO_INT(nM5CoilBRaw);
-//nM5Current := ABS(nM5CoilA) + ABS(nM5CoilB);
-nM6CoilA := UINT_TO_INT(nM6CoilARaw);
-nM6CoilB := UINT_TO_INT(nM6CoilBRaw);
-//nM6Current := ABS(nM6CoilA) + ABS(nM6CoilB);
-nM7CoilA := UINT_TO_INT(nM7CoilARaw);
-nM7CoilB := UINT_TO_INT(nM7CoilBRaw);
-//nM7Current := ABS(nM7CoilA) + ABS(nM7CoilB);
-nM8CoilA := UINT_TO_INT(nM8CoilARaw);
-nM8CoilB := UINT_TO_INT(nM8CoilBRaw);
-//nM8Current := ABS(nM9CoilA) + ABS(nM9CoilB);
-nM9CoilA := UINT_TO_INT(nM9CoilARaw);
-nM9CoilB := UINT_TO_INT(nM9CoilBRaw);
-//nM9Current := ABS(nM9CoilA) + ABS(nM9CoilB);
-nM10CoilA := UINT_TO_INT(nM10CoilARaw);
-nM10CoilB := UINT_TO_INT(nM10CoilBRaw);
-//nM10Current := ABS(nM10CoilA) + ABS(nM10CoilB);
-nM11CoilA := UINT_TO_INT(nM11CoilARaw);
-nM11CoilB := UINT_TO_INT(nM11CoilBRaw);
-//nM11Current := ABS(nM11CoilA) + ABS(nM11CoilB);
-nM12CoilA := UINT_TO_INT(nM12CoilARaw);
-nM12CoilB := UINT_TO_INT(nM12CoilBRaw);
-//nM12Current := ABS(nM12CoilA) + ABS(nM12CoilB);
-nM13CoilA := UINT_TO_INT(nM13CoilARaw);
-nM13CoilB := UINT_TO_INT(nM13CoilBRaw);
-//nM13Current := ABS(nM13CoilA) + ABS(nM13CoilB);
-nM14CoilA := UINT_TO_INT(nM14CoilARaw);
-nM14CoilB := UINT_TO_INT(nM14CoilBRaw);
-//nM14Current := ABS(nM14CoilA) + ABS(nM14CoilB);
-nM15CoilA := UINT_TO_INT(nM15CoilARaw);
-nM15CoilB := UINT_TO_INT(nM15CoilBRaw);
-//nM15Current := ABS(nM15CoilA) + ABS(nM15CoilB);
-nM16CoilA := UINT_TO_INT(nM16CoilARaw);
-nM16CoilB := UINT_TO_INT(nM16CoilBRaw);
-//nM16Current := ABS(nM16CoilA) + ABS(nM16CoilB);
-nM17CoilA := UINT_TO_INT(nM17CoilARaw);
-nM17CoilB := UINT_TO_INT(nM17CoilBRaw);
-//nM17Current := ABS(nM17CoilA) + ABS(nM17CoilB);
-nM18CoilA := UINT_TO_INT(nM18CoilARaw);
-nM18CoilB := UINT_TO_INT(nM18CoilBRaw);
-//nM18Current := ABS(nM2CoilA) + ABS(nM18CoilB);
-nM19CoilA := UINT_TO_INT(nM19CoilARaw);
-nM19CoilB := UINT_TO_INT(nM19CoilBRaw);
-//nM19Current := ABS(nM2CoilA) + ABS(nM2CoilB);]]></ST>
+iIndex := 0;]]></ST>
     </Implementation>
+    <LineIds Name="PRG_AT2L0_SOLID">
+      <LineId Id="3" Count="32" />
+    </LineIds>
   </POU>
 </TcPlcObject>

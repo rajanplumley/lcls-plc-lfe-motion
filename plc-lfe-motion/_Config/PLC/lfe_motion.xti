@@ -981,16 +981,6 @@ External Setpoint Generation:
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
-					<Name>PRG_AT2L0_SOLID.nM1CoilARaw</Name>
-					<Comment><![CDATA[ For plotting voltage/current during debugging]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM1CoilBRaw</Name>
-					<Comment><![CDATA[ ..CoilBRaw is currently linked to EL7041 'Coil Voltage A']]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
 					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[0].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
@@ -1065,168 +1055,6 @@ External Setpoint Generation:
 				<Var>
 					<Name>PRG_AT2L0_SOLID.fbAT2L0_motion[18].fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{72F5AAAA-16DF-4ED3-8367-F6C8C3ADAE99}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM2CoilARaw</Name>
-					<Comment><![CDATA[nM1Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM2CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM3CoilARaw</Name>
-					<Comment><![CDATA[nM2Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM3CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM4CoilARaw</Name>
-					<Comment><![CDATA[nM3Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM4CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM5CoilARaw</Name>
-					<Comment><![CDATA[nM4Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM5CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM6CoilARaw</Name>
-					<Comment><![CDATA[nM5Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM6CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM7CoilARaw</Name>
-					<Comment><![CDATA[nM6Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM7CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM8CoilARaw</Name>
-					<Comment><![CDATA[nM7Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM8CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM9CoilARaw</Name>
-					<Comment><![CDATA[nM8Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM9CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM10CoilARaw</Name>
-					<Comment><![CDATA[nM9Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM10CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM11CoilARaw</Name>
-					<Comment><![CDATA[nM10Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM11CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM12CoilARaw</Name>
-					<Comment><![CDATA[nM11Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM12CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM13CoilARaw</Name>
-					<Comment><![CDATA[nM12Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM13CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM14CoilARaw</Name>
-					<Comment><![CDATA[nM13Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM14CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM15CoilARaw</Name>
-					<Comment><![CDATA[nM14Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM15CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM16CoilARaw</Name>
-					<Comment><![CDATA[nM15Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM16CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM17CoilARaw</Name>
-					<Comment><![CDATA[nM16Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM17CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM18CoilARaw</Name>
-					<Comment><![CDATA[nM17Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM18CoilBRaw</Name>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM19CoilARaw</Name>
-					<Comment><![CDATA[nM18Current: INT;]]></Comment>
-					<Type>UINT</Type>
-				</Var>
-				<Var>
-					<Name>PRG_AT2L0_SOLID.nM19CoilBRaw</Name>
-					<Type>UINT</Type>
 				</Var>
 				<Var>
 					<Name>PRG_IM1L0_XTES.fbIM1L0.bZoomEndFwd</Name>
@@ -3890,6 +3718,86 @@ External Setpoint Generation:
 					</OwnerB>
 				</OwnerA>
 			</UnrestoredVarLinks>
+			<UnrestoredVarLinks ImportTime="2020-06-03T16:25:43">
+				<OwnerA Name="InputDst" Prefix="TIPC^lfe_motion^lfe_motion Instance" Type="1">
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01">
+						<Link VarA="PRG_AT2L0_SOLID.nM1CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM1CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02">
+						<Link VarA="PRG_AT2L0_SOLID.nM2CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM2CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03">
+						<Link VarA="PRG_AT2L0_SOLID.nM3CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM3CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-04">
+						<Link VarA="PRG_AT2L0_SOLID.nM4CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM4CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-05">
+						<Link VarA="PRG_AT2L0_SOLID.nM5CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM5CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-06">
+						<Link VarA="PRG_AT2L0_SOLID.nM6CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM6CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-07">
+						<Link VarA="PRG_AT2L0_SOLID.nM7CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM7CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-08">
+						<Link VarA="PRG_AT2L0_SOLID.nM8CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM8CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-09">
+						<Link VarA="PRG_AT2L0_SOLID.nM9CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM9CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-10">
+						<Link VarA="PRG_AT2L0_SOLID.nM10CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM10CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-11">
+						<Link VarA="PRG_AT2L0_SOLID.nM11CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM11CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-12">
+						<Link VarA="PRG_AT2L0_SOLID.nM12CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM12CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-13">
+						<Link VarA="PRG_AT2L0_SOLID.nM13CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM13CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-14">
+						<Link VarA="PRG_AT2L0_SOLID.nM14CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM14CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-15">
+						<Link VarA="PRG_AT2L0_SOLID.nM15CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM15CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-16">
+						<Link VarA="PRG_AT2L0_SOLID.nM16CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM16CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-17">
+						<Link VarA="PRG_AT2L0_SOLID.nM17CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM17CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-18">
+						<Link VarA="PRG_AT2L0_SOLID.nM18CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM18CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+					<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-19">
+						<Link VarA="PRG_AT2L0_SOLID.nM19CoilARaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 1" RestoreInfo="ANotFound"/>
+						<Link VarA="PRG_AT2L0_SOLID.nM19CoilBRaw" TypeA="UINT" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000005}" VarB="STM Synchron info data^Info data 2" RestoreInfo="ANotFound"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="20" OTCID="#x08502001"/>
 			</TaskPouOids>
@@ -4040,116 +3948,78 @@ External Setpoint Generation:
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-01">
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M1.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM1CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-02">
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M2.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM2CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-03">
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M3.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM3CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-04">
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M4.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM4CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-05">
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M5.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM5CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-06">
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M6.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM6CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-07">
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M7.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM7CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-08">
 				<Link VarA="PlcTask Inputs^Main.M8.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M8.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM8CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-09">
 				<Link VarA="PlcTask Inputs^Main.M9.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M9.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM9CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-10">
 				<Link VarA="PlcTask Inputs^Main.M10.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M10.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM10CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-11">
 				<Link VarA="PlcTask Inputs^Main.M11.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M11.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM11CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-12">
 				<Link VarA="PlcTask Inputs^Main.M12.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M12.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM12CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-13">
 				<Link VarA="PlcTask Inputs^Main.M13.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M13.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM13CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-14">
 				<Link VarA="PlcTask Inputs^Main.M14.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M14.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM14CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-15">
 				<Link VarA="PlcTask Inputs^Main.M15.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M15.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM15CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-16">
 				<Link VarA="PlcTask Inputs^Main.M16.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M16.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM16CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-17">
 				<Link VarA="PlcTask Inputs^Main.M17.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M17.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM17CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-18">
 				<Link VarA="PlcTask Inputs^Main.M18.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M18.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM18CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E1 (EK1122)^X2 AT2L0-SOLID (EK1100)^AT2L0-EL7041-19">
 				<Link VarA="PlcTask Inputs^Main.M19.bLimitBackwardEnable" VarB="STM Status^Status^Digital input 1" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^Main.M19.bLimitForwardEnable" VarB="STM Status^Status^Digital input 2" AutoLink="true" Size="1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilARaw" VarB="STM Synchron info data^Info data 1"/>
-				<Link VarA="PlcTask Inputs^PRG_AT2L0_SOLID.nM19CoilBRaw" VarB="STM Synchron info data^Info data 2"/>
 			</OwnerB>
 			<OwnerB Name="TIID^PLC Rail (EtherCAT)^Power (EK1200)^PLC Junction 2 (EK1122)^X1 HXR EC1 (EK1100)^EC1 E2 (EK1122)^X1 IM2L0-XTES (EK1100)^IM2L0-EL1088">
 				<Link VarA="PlcTask Inputs^Main.M25.bHome" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
