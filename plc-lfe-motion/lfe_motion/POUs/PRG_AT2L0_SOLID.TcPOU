@@ -7,48 +7,98 @@ VAR
     bAT2L0_debug: BOOL := FALSE;
 	// Otherwise the motors are only enabled during commanded motion.
     nAT2L0_enableMode: ENUM_StageEnableMode := ENUM_StageEnableMode.DURING_MOTION;
+	// Motor index
     iIndex: INT;
+	// Motion 
     fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
-    fbAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
+	fbAT2L0_inout: ARRAY [0..18] OF FB_EpicsInOut;
+    stAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
+	
+    // State values
+    fOut : LREAL := 23;
+    fIn : LREAL := 0;
+    fVelo : LREAL := 3;
+    fAccel : LREAL := 100;
+    bStatesLock : BOOL := False;
+	// States
+    stOut: DUT_PositionState;
+    stIn: DUT_PositionState;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[fbAT2L0_axes[0]:= ADR(Main.M1);
-fbAT2L0_axes[1]:= ADR(Main.M2);
-fbAT2L0_axes[2]:= ADR(Main.M3);
-fbAT2L0_axes[3]:= ADR(Main.M4);
-fbAT2L0_axes[4]:= ADR(Main.M5);
-fbAT2L0_axes[5]:= ADR(Main.M6);
-fbAT2L0_axes[6]:= ADR(Main.M7);
-fbAT2L0_axes[7]:= ADR(Main.M8);
-fbAT2L0_axes[8]:= ADR(Main.M9);
-fbAT2L0_axes[9]:= ADR(Main.M10);
-fbAT2L0_axes[10]:= ADR(Main.M11);
-fbAT2L0_axes[11]:= ADR(Main.M12);
-fbAT2L0_axes[12]:= ADR(Main.M13);
-fbAT2L0_axes[13]:= ADR(Main.M14);
-fbAT2L0_axes[14]:= ADR(Main.M15);
-fbAT2L0_axes[15]:= ADR(Main.M16);
-fbAT2L0_axes[16]:= ADR(Main.M17);
-fbAT2L0_axes[17]:= ADR(Main.M18);
-fbAT2L0_axes[18]:= ADR(Main.M19);
-
+      <ST><![CDATA[//-----OUT-----
+stOut.fPosition := fOut;
+stOut.fDelta := 0.1;
+stOut.fVelocity := fVelo;
+stOut.fAccel := fAccel;
+stOut.fDecel := fAccel;
+stOut.bLocked := bStatesLock;
+stOut.bValid := TRUE;
+stOut.bMoveOk := TRUE;
+//-----IN------
+stIn.fPosition := fIn;
+stIn.fDelta := 0.1;
+stIn.fVelocity := fVelo;
+stIn.fAccel := fAccel;
+stIn.fDecel := fAccel;
+stIn.bLocked := bStatesLock;
+stIn.bValid := TRUE;
+stIn.bMoveOk := TRUE;
+//=================================================
+// Populate MotionStage array with AT2L0 motors
+stAT2L0_axes[0]:= ADR(Main.M1);
+stAT2L0_axes[1]:= ADR(Main.M2);
+stAT2L0_axes[2]:= ADR(Main.M3);
+stAT2L0_axes[3]:= ADR(Main.M4);
+stAT2L0_axes[4]:= ADR(Main.M5);
+stAT2L0_axes[5]:= ADR(Main.M6);
+stAT2L0_axes[6]:= ADR(Main.M7);
+stAT2L0_axes[7]:= ADR(Main.M8);
+stAT2L0_axes[8]:= ADR(Main.M9);
+stAT2L0_axes[9]:= ADR(Main.M10);
+stAT2L0_axes[10]:= ADR(Main.M11);
+stAT2L0_axes[11]:= ADR(Main.M12);
+stAT2L0_axes[12]:= ADR(Main.M13);
+stAT2L0_axes[13]:= ADR(Main.M14);
+stAT2L0_axes[14]:= ADR(Main.M15);
+stAT2L0_axes[15]:= ADR(Main.M16);
+stAT2L0_axes[16]:= ADR(Main.M17);
+stAT2L0_axes[17]:= ADR(Main.M18);
+stAT2L0_axes[18]:= ADR(Main.M19);
+//=================================================
+// Check if `debug mode` is enabled
 IF bAT2L0_debug = TRUE THEN
     nAT2L0_enableMode := ENUM_StageEnableMode.ALWAYS;
 ELSE
     nAT2L0_enableMode := ENUM_StageEnableMode.DURING_MOTION;
 END_IF
-
+//=================================================
+// Initialize motors
 FOR iIndex := 0 TO 18 BY 1 DO
-    fbAT2L0_motion[iIndex](stMotionStage := fbAT2L0_axes[iIndex]^);
-    fbAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
-    fbAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
-    fbAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
+    fbAT2L0_motion[iIndex](stMotionStage := stAT2L0_axes[iIndex]^);
+	fbAT2L0_inout[iIndex](stMotionStage := stAT2L0_axes[iIndex]^,
+		stOut := stOut,
+		stIn := stIn);
+    stAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
+    stAT2L0_axes[iIndex]^.bHardwareEnable := TRUE;
+    stAT2L0_axes[iIndex]^.bPowerSelf := TRUE;
 END_FOR
 iIndex := 0;]]></ST>
     </Implementation>
     <LineIds Name="PRG_AT2L0_SOLID">
-      <LineId Id="3" Count="32" />
+      <LineId Id="237" Count="0" />
+      <LineId Id="220" Count="16" />
+      <LineId Id="217" Count="0" />
+      <LineId Id="238" Count="0" />
+      <LineId Id="3" Count="18" />
+      <LineId Id="261" Count="0" />
+      <LineId Id="246" Count="0" />
+      <LineId Id="23" Count="4" />
+      <LineId Id="249" Count="0" />
+      <LineId Id="28" Count="2" />
+      <LineId Id="252" Count="0" />
+      <LineId Id="256" Count="1" />
+      <LineId Id="31" Count="4" />
     </LineIds>
   </POU>
 </TcPlcObject>
