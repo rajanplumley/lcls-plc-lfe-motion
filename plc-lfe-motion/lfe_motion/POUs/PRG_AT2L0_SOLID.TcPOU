@@ -11,6 +11,12 @@ VAR
     iIndex: INT;
 	// Motion 
     fbAT2L0_motion: ARRAY [0..18] OF FB_MotionStage;
+	
+	{attribute 'pytmc' := '
+		pv: AT2L0:XTES:MMS:
+		io: io
+		expand: %.2d
+	'}
 	fbAT2L0_inout: ARRAY [0..18] OF FB_EpicsInOut;
     stAT2L0_axes: ARRAY [0..18] OF POINTER TO DUT_MotionStage;
 	
@@ -76,7 +82,8 @@ END_IF
 // Initialize motors
 FOR iIndex := 0 TO 18 BY 1 DO
     fbAT2L0_motion[iIndex](stMotionStage := stAT2L0_axes[iIndex]^);
-	fbAT2L0_inout[iIndex](stMotionStage := stAT2L0_axes[iIndex]^,
+	fbAT2L0_inout[iIndex](
+		stMotionStage := stAT2L0_axes[iIndex]^,
 		stOut := stOut,
 		stIn := stIn);
     stAT2L0_axes[iIndex]^.nEnableMode := nAT2L0_enableMode;
@@ -97,6 +104,7 @@ iIndex := 0;]]></ST>
       <LineId Id="249" Count="0" />
       <LineId Id="28" Count="2" />
       <LineId Id="252" Count="0" />
+      <LineId Id="285" Count="0" />
       <LineId Id="256" Count="1" />
       <LineId Id="31" Count="4" />
     </LineIds>
