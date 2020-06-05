@@ -15,7 +15,7 @@ VAR
 	{attribute 'pytmc' := '
 		pv: AT2L0:XTES:MMS:
 		io: io
-		expand: %.2d
+		expand: %.2d:STATE
 	'}
 	fbAT2L0_inout: ARRAY [1..19] OF FB_EpicsInOut;
     stAT2L0_axes: ARRAY [1..19] OF POINTER TO DUT_MotionStage;
